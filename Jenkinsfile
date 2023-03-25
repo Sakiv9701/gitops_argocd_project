@@ -4,8 +4,8 @@ pipeline{
 
         environment{
 
-        DOCKERHUB_USERNAME = "anshuman123abc"
-        APP_NAME = "gitops-argocd"
+        DOCKERHUB_USERNAME = "raisakiv023"
+        APP_NAME = "git-ops-argd-ci"
         IMAGE_TAG = "${BUILD_NUMBER}"
         IMAGE_NAME = "${DOCKERHUB_USERNAME}" + "/" + "${APP_NAME}"
         REGISTRY_CREDS = 'dockerhub'
@@ -33,12 +33,12 @@ pipeline{
                 script{
 
                     git credentialsId: "github",
-                    url: 'https://github.com/anshumanhota1/gitops_argocd_project.git',
+                    url: 'https://github.com/Sakiv9701/gitops_argocd_project.git',
                     branch: 'main'
                 }
             }
 
-            }
+         }
 
             stage('Build docker image') {
 
@@ -88,7 +88,6 @@ pipeline{
                     }
                 }
             }
-            
-
         }
     }
+//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 
